@@ -5,15 +5,18 @@ metadata:
   name: rabbitmq
   labels:
     name: rabbitmq
+    eu-west-1: clustername
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: rabbitmq
+      eu-west-1: clustername
   template:
     metadata:
       labels:
         name: rabbitmq
+        eu-west-1: clustername
       annotations:
         prometheus.io/scrape: "false"
     spec:
