@@ -8,10 +8,12 @@ spec:
   selector:
     matchLabels:
       name: front-end
+      eu-west-1: clustername
   template:
     metadata:
       labels:
         name: front-end
+        eu-west-1: clustername
     spec:
       containers:
       - name: front-end
