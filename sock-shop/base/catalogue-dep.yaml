@@ -5,15 +5,18 @@ metadata:
   name: catalogue
   labels:
     name: catalogue
+    eu-west-1: clustername
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: catalogue
+      eu-west-1: clustername
   template:
     metadata:
       labels:
         name: catalogue
+        eu-west-1: clustername
     spec:
       containers:
       - name: catalogue
