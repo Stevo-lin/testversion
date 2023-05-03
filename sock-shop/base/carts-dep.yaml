@@ -5,15 +5,18 @@ metadata:
   name: carts
   labels:
     name: carts
+    eu-west-1: clustername
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: carts
+      eu-west-1: clustername
   template:
     metadata:
       labels:
         name: carts
+        eu-west-1: clustername
     spec:
       containers:
       - name: carts
