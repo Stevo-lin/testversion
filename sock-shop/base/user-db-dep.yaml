@@ -5,15 +5,18 @@ metadata:
   name: user-db
   labels:
     name: user-db
+    eu-west-1: clustername
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: user-db
+      eu-west-1: clustername
   template:
     metadata:
       labels:
         name: user-db
+        eu-west-1: clustername
     spec:
       containers:
       - name: user-db
