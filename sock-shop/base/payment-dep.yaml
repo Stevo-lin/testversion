@@ -5,15 +5,18 @@ metadata:
   name: payment
   labels:
     name: payment
+    eu-west-1: clustername
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: payment
+      eu-west-1: clustername
   template:
     metadata:
       labels:
         name: payment
+        eu-west-1: clustername
     spec:
       containers:
       - name: payment
