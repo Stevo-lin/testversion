@@ -5,18 +5,18 @@ metadata:
   name: session-db
   labels:
     name: session-db
-    eu-west-1: clustername
+    clustername: poc1
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: session-db
-      eu-west-1: clustername
+      clustername: poc1
   template:
     metadata:
       labels:
         name: session-db
-        eu-west-1: clustername
+        clustername: poc1
       annotations:
         prometheus.io.scrape: "false"
     spec:
