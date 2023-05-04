@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
-    Eu-west-1: clustername
+    clustername: poc1
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
@@ -13,13 +13,13 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      Eu-west-1: clustername
+      clustername: poc1
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        Eu-west-1: clustername
+        clustername: poc1
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
     spec:
