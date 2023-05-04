@@ -5,18 +5,18 @@ metadata:
   name: shipping
   labels:
     name: shipping
-    eu-west-1: clustername
+    clustername: poc1
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: shipping
-      eu-west-1: clustername
+      clustername: poc1
   template:
     metadata:
       labels:
         name: shipping
-        eu-west-1: clustername
+        clustername: poc1
     spec:
       containers:
       - name: shipping
