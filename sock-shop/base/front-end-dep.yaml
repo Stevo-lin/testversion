@@ -4,18 +4,18 @@ kind: Deployment
 metadata:
   name: front-end
   labels:
-    eu-west-1: clustername
+    clustername: poc1
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: front-end
-      eu-west-1: clustername
+      clustername: poc1
   template:
     metadata:
       labels:
         name: front-end
-        eu-west-1: clustername
+        clustername: poc1
     spec:
       containers:
       - name: front-end
