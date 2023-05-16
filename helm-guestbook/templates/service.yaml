@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
-    Eu-west-1: clustername
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
