@@ -4,7 +4,7 @@ metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
     type: database
-    clustername: kind-workertype3
+    clustername: kind-workertype333
     region: eu-west-1
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
@@ -19,7 +19,7 @@ spec:
       name: http
   selector:
     type: database
-    clustername: kind-workertype3
+    clustername: kind-workertype333
     region: eu-west-1
     app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}
