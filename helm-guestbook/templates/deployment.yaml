@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
+    region: eu-east-1
+    clustername: kind-worker2
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
@@ -12,11 +14,15 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
+      region: eu-east-1
+      clustername: kind-worker2
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
+        region: eu-east-1
+        clustername: kind-worker2
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
     spec:
