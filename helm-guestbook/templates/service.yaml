@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
+    type: database
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
@@ -15,5 +16,6 @@ spec:
       protocol: TCP
       name: http
   selector:
+    type: database
     app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}
