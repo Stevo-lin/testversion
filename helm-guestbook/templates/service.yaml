@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
+    region: eu-east-1
+    clustername: kind-worker2
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
@@ -15,5 +17,7 @@ spec:
       protocol: TCP
       name: http
   selector:
+    region: eu-east-1
+    clustername: kind-worker2
     app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}
