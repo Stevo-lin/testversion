@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
@@ -12,11 +15,17 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
+      type: database
+      clustername: kind-workertype3
+      region: eu-west-1
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
+        type: database
+        clustername: kind-workertype3
+        region: eu-west-1
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
     spec:
