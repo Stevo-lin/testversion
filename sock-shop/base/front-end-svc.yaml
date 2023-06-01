@@ -5,6 +5,9 @@ metadata:
   name: front-end
   labels:
     name: front-end
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
 spec:
   type: LoadBalancer
   ports:
@@ -13,3 +16,6 @@ spec:
     nodePort: 30001
   selector:
     name: front-end
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
