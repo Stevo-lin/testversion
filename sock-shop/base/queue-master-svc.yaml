@@ -5,6 +5,9 @@ metadata:
   name: queue-master
   labels:
     name: queue-master
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
   annotations:
     prometheus.io/path: "/prometheus"
 spec:
@@ -14,3 +17,6 @@ spec:
     targetPort: 80
   selector:
     name: queue-master
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
