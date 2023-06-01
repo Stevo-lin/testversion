@@ -4,7 +4,7 @@ metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
     type: database
-    clustername: 
+    clustername: kind-workertype323
     region: eu-west-1
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
@@ -16,7 +16,7 @@ spec:
   selector:
     matchLabels:
       type: database
-      clustername: 
+      clustername: kind-workertype323
       region: eu-west-1
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
@@ -24,7 +24,7 @@ spec:
     metadata:
       labels:
         type: database
-        clustername: 
+        clustername: kind-workertype323
         region: eu-west-1
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
