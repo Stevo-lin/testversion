@@ -5,6 +5,9 @@ metadata:
   name: session-db
   labels:
     name: session-db
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
 spec:
   ports:
     # the port that this service should serve on
@@ -12,3 +15,6 @@ spec:
     targetPort: 6379
   selector:
     name: session-db
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
