@@ -20,5 +20,6 @@ spec:
   selector:
     type: database
     clustername: kind-workertype3
-    region: eu-west-1    app: {{ template "helm-guestbook.name" . }}
+    region: eu-west-1    
+    app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}
