@@ -5,6 +5,9 @@ metadata:
   name: user-db
   labels:
     name: user-db
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
 spec:
   ports:
     # the port that this service should serve on
@@ -12,4 +15,6 @@ spec:
     targetPort: 27017
   selector:
     name: user-db
-
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
