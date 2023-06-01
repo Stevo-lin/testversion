@@ -4,18 +4,24 @@ kind: Deployment
 metadata:
   name: front-end
   labels:
-    clustername: poc1
+    type: database
+    clustername: kind-workertype3
+    region: eu-west-1
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: front-end
-      clustername: poc1
+      type: database
+      clustername: kind-workertype3
+      region: eu-west-1
   template:
     metadata:
       labels:
         name: front-end
-        clustername: poc1
+        type: database
+        clustername: kind-workertype3
+        region: eu-west-1
     spec:
       containers:
       - name: front-end
